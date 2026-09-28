@@ -24,7 +24,7 @@
       我最喜欢吃中国菜
     </h1>
     <p class="text-slate-400 font-medium tracking-wide">
-      Dilfuza Kāng lǎo shī bilan xitoy tilini o'rganmiz
+      Dilfuza Kāng lǎo shī bilan xitoy tilini o'rganamiz
     </p>
   </header>
 
@@ -107,7 +107,7 @@
         title: "4-Matn (Text 4)",
         context: { zh: "在房间，白家月在写日记。", pinyin: "Zài fángjiān, Bái Jiāyuè zài xiě rìjì.", uz: "Xonada, Bay Jiayue kundalik yozyapti.", ru: "В комнате Бай Цзяюэ пишет дневник.", en: "In the room, Bai Jiayue is writing a diary." },
         lines: [
-          { speaker: "白家月", zh: "我这几天经常头疼，从药店买了点儿药，没去医院。", textPinyin: "Wǒ zhè jǐ tiān jīngcháng tóu téng, cóng yàodiàn mǎile diǎnr yào, méi qù yīyuàn.", uz: "Shu kunlarda boshim tez-tez og'riyapti, dorixonadan biroz dori oldim, kasalxonaga bormadim.", ru: "В эти дни у меня часто болит构造 голова, я купила немного лекарств в аптеке и не пошла в больницу.", en: "I have been having frequent headaches these days, bought some medicine from the pharmacy, didn't go to the hospital." },
+          { speaker: "白家月", zh: "我这几天经常头疼，从药店买了点儿药，没去医院。", textPinyin: "Wǒ zhè jǐ tiān jīngcháng tóu téng, cóng yàodiàn mǎile diǎnr yào, méi qù yīyuàn.", uz: "Shu kunlarda boshim tez-tez og'riyapti, dorixonadan biroz dori oldim, kasalxonaga bormadim.", ru: "В эти дни у меня часто болит голова, я купила немного лекарств в аптеке и не пошла в больницу.", en: "I have been having frequent headaches these days, bought some medicine from the pharmacy, didn't go to the hospital." },
           { speaker: "白家月", zh: "今天下课后，王老师看我不舒服，就送我去医院了。", textPinyin: "Jīntiān xiàkè hòu, Wáng lǎoshī kàn wǒ bù shūfu, jiù sòng wǒ qù yīyuàn le.", uz: "Bugun darsdan so'ng, Vang o'qituvchi ahvolim yaxshi emasligini ko'rib, meni kasalxonaga olib bordi.", ru: "Сегодня после уроков учитель Ван увидела, что мне плохо, и отвезла меня в больницу.", en: "Today after class, Teacher Wang saw I was unwell and took me to the hospital." },
           { speaker: "白家月", zh: "从医院回来，李文也来看我了。", textPinyin: "Cóng yīyuàn huílái, Lǐ Wén yě lái kàn wǒ le.", uz: "Kasalxonadan qaytganimda, Li Ven ham meni ko'rgani keldi.", ru: "По возвращении из больницы Ли Вэнь тоже пришел навестить меня.", en: "Returning from the hospital, Li Wen also came to see me." },
           { speaker: "白家月", zh: "现在他们都回去了，我也要睡觉了。", textPinyin: "Xiànzài tāmen dōu huíqù le, wǒ yě yào shuìjiào le.", uz: "Hozir ularning barchasi qaytib ketishdi, men ham uxlamoqchiman.", ru: "Сейчас они все разошлись по домам, и я тоже собираюсь спать.", en: "Now they have all gone back, and I am going to sleep too." }
@@ -121,7 +121,7 @@
         explanation: {
           uz: "Fe'ldan keyin kelib, harakat yoki holatning davom etayotganini bildiradi. Inkor shakli fe'ldan oldin '没(有)' qo'yish orqali yasaladi.",
           ru: "Используется после глагола для указания на продолжение действия или состояния. Отрицательная форма образуется добавлением '没(有)' перед глаголом.",
-          en: "Used after a verb to indicate the continuation of an action or a state. The negative form is created by adding '没(起)' before the verb."
+          en: "Used after a verb to indicate the continuation of an action or a state. The negative form is created by adding '没(有)' before the verb."
         },
         examples: [
           { zh: "那你在这儿坐着。", pinyin: "Nà nǐ zài zhèr zuòzhe.", uz: "U holda siz shu yerda o'tirib turing." },
@@ -288,7 +288,7 @@
                  <p class="text-4xl text-teal-400 font-semibold mb-6">${word.pinyin}</p>
                  <div class="space-y-3 w-full border-t border-slate-700 pt-6">
                     <p class="text-xl text-slate-200"><span class="text-slate-500 font-medium mr-2">UZ:</span>${word.uz}</p>
-                    <p class="text-lg text-slate-300"><span className="text-slate-500 font-medium mr-2">RU:</span>${word.ru}</p>
+                    <p class="text-lg text-slate-300"><span class="text-slate-500 font-medium mr-2">RU:</span>${word.ru}</p>
                     <p class="text-lg text-slate-300"><span class="text-slate-500 font-medium mr-2">EN:</span>${word.en}</p>
                  </div>
               </div>
@@ -378,7 +378,7 @@
                   else btnClass = "bg-slate-800 text-slate-500 opacity-50";
                 }
                 return `
-                  <button onclick="selectVocabOption('${opt}')" ${state.vocabTestSelected !== null ? 'disabled' : ''} class="py-4 px-6 rounded-xl text-lg font-medium transition-all ${btnClass}">
+                  <button onclick="selectVocabOption(${JSON.stringify(opt)})" ${state.vocabTestSelected !== null ? 'disabled' : ''} class="py-4 px-6 rounded-xl text-lg font-medium transition-all ${btnClass}">
                     ${opt}
                   </button>
                 `;
