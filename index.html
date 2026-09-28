@@ -378,7 +378,7 @@
                   else btnClass = "bg-slate-800 text-slate-500 opacity-50";
                 }
                 return `
-                  <button onclick="selectVocabOption(${JSON.stringify(opt)})" ${state.vocabTestSelected !== null ? 'disabled' : ''} class="py-4 px-6 rounded-xl text-lg font-medium transition-all ${btnClass}">
+                  <button onclick="selectVocabOption(${JSON.stringify(opt).replace(/'/g, "&#39;")})" ${state.vocabTestSelected !== null ? 'disabled' : ''} class="py-4 px-6 rounded-xl text-lg font-medium transition-all ${btnClass}">
                     ${opt}
                   </button>
                 `;
